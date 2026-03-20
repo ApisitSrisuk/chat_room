@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: chatroom-server
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: CLIENT_URL
+        sync: false   # ใส่ Vercel URL ใน Render Dashboard ทีหลัง
+    autoDeploy: true
