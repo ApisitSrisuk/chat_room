@@ -1,0 +1,41 @@
+.container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 16px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.4;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  filter: grayscale(0.5);
+}
+
+.emptyText {
+  font-size: 17px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.emptySubtext {
+  font-size: 13.5px;
+  color: #64748b;
+}

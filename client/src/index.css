@@ -1,0 +1,102 @@
+/* ═══════════════════════════════════════════════
+   CHATROOM — Global Design System
+   Dark Glassmorphism • Purple / Indigo Theme
+   ═══════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --bg-deep:      #070711;
+  --bg-dark:      #0d0d1a;
+  --bg-card:      rgba(255, 255, 255, 0.035);
+  --bg-card-hover:rgba(255, 255, 255, 0.06);
+  --border:       rgba(255, 255, 255, 0.08);
+  --border-bright:rgba(255, 255, 255, 0.15);
+
+  --primary:      #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --secondary:    #8b5cf6;
+  --accent:       #ec4899;
+  --accent-teal:  #14b8a6;
+
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+
+  /* Gradients */
+  --grad-bg: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.25) 0%, transparent 60%),
+             radial-gradient(ellipse 50% 40% at 90% 80%, rgba(139,92,246,0.15) 0%, transparent 50%),
+             #070711;
+  --grad-primary: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --grad-card:    linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+
+  /* Shadows */
+  --shadow-glow:  0 0 40px rgba(99, 102, 241, 0.15);
+  --shadow-card:  0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-msg:   0 2px 12px rgba(0, 0, 0, 0.3);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-head: 'Space Grotesk', system-ui, sans-serif;
+
+  /* Radius */
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--grad-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.6); }
+
+/* ── Selection ─────────────────────────────── */
+::selection {
+  background: rgba(99, 102, 241, 0.4);
+  color: white;
+}
+
+/* ── Glass utility ─────────────────────────── */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+}
+
+/* ── Neon glow utility ─────────────────────── */
+.neon-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

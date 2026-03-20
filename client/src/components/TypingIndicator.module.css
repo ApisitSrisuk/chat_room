@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 0 6px rgba(99,102,241,0.5);
+}
+
+.label {
+  font-size: 12.5px;
+  color: #64748b;
+  font-style: italic;
+}

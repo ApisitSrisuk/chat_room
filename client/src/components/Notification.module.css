@@ -1,0 +1,43 @@
+.stack {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+  pointer-events: none;
+  min-width: 300px;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  backdrop-filter: blur(16px);
+  border: 1px solid;
+  white-space: nowrap;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.itemJoin {
+  background: rgba(20, 184, 166, 0.12);
+  border-color: rgba(20, 184, 166, 0.3);
+  color: #5eead4;
+}
+
+.itemLeave {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.icon {
+  font-size: 10px;
+}

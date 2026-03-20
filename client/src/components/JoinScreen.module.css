@@ -1,0 +1,195 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: var(--top);
+  left: var(--left);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, hsl(var(--hue), 80%, 60%, 0.15), transparent 70%);
+  border: 1px solid hsl(var(--hue), 60%, 60%, 0.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 28px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 8px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,102,241,0.1) inset;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+}
+
+.logoText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+  margin-left: 6px;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #94a3b8;
+  margin-bottom: 36px;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #fca5a5;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.input::placeholder { color: #475569; }
+
+.input:focus {
+  border-color: rgba(99,102,241,0.6);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12), inset 0 0 0 1px rgba(99,102,241,0.1);
+}
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.roomChip {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', monospace;
+}
+
+.roomChip:hover {
+  background: rgba(99,102,241,0.1);
+  border-color: rgba(99,102,241,0.3);
+  color: #a5b4fc;
+}
+
+.roomChipActive {
+  background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(139,92,246,0.2));
+  border-color: rgba(99,102,241,0.6);
+  color: #c7d2fe;
+  box-shadow: 0 0 16px rgba(99,102,241,0.2);
+}
+
+.joinBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 14px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+  transition: transform 0.15s;
+  font-family: 'Inter', sans-serif;
+  margin-top: 4px;
+}
+
+.joinBtn:active { transform: scale(0.97); }
